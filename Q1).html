@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>JavaScript - using function</title>
+<script>
+function add(){
+   // get the value of element with id n1
+  var num1=document.getElementById("n1").value;
+   // get the value of element with id n2
+  var num2=document.getElementById("n2").value;
+   // calculate result
+  var answer = Number(num1) + Number(num2);
+   // display the result at the <span> of id result
+  document.getElementById("result").innerText = answer;
+}
+</script>
+</head>
+<body>
+<label>First Number:<input type="number" id="n1"/></label>
+<br>
+<label>Second Number:<input type="number" id="n2"/></label>
+<br>
+<input type="button" value="Add" onclick="add()"/>
+<p>
+Result = <span id="result"></span>
+</p>
+</body>
+</html>
+
+
+<!-----
+ document object model (dom)
+ objects has attributes
+ we have been doing static html, cnnt change
+ now we are doing dynamic, can change
+ element is WHOLE TAG, FROM BEGINNING TO END!
+ .innerHtml
+ number(num1) same as parseInt(num1)
+ now still client side, browser do fr u.
+ (this) - by default alr inside
+ innerHTML - take html
+ the ondisplay() is to call out the function at the html
