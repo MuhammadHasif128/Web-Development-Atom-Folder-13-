@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Dynamically Add New List Item</title>
+  <style>
+	ul { list-style-position:inside; }
+  </style>
+  <script>
+
+    function addItem() {
+
+	  var newItem = prompt("Enter a new item")
+
+	 //use getElementById method to get <ul> element
+    var ul_element = document.getElementById('hobby')
+
+	 //create the <li> element using the createElement method
+    var new_li = document.createElement('li')
+
+	 // assign the text (entered by user) to the new item element
+    new_li.innerText = newItem
+
+	 //append the new item element to the <ul> element
+    ul_element.append(new_li)
+	}
+
+  </script>
+
+</head>
+<body>
+  <ul id="hobby">
+       My Hobbies:
+       <li>Swimming</li>
+       <li>Jogging</li>
+  </ul>
+  <button id="c" onclick="addItem()">Add Item</button>
+</body>
+</html>
